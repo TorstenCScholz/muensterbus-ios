@@ -15,7 +15,80 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        //NSLog("Hallo Welt")
+        
+        let request = NSMutableURLRequest(URL: NSURL(string: "http://46.101.172.145:4567/search/aegi")!)
+        
+        let config = NSURLSessionConfiguration.defaultSessionConfiguration()
+        let session = NSURLSession(configuration: config)
+        
+        let task = session.dataTaskWithRequest(request) { (data, response, error) in
+        
+            // check for any erorrs
+            guard error == nil else {
+                print("error calling GET on /todos/1")
+                print(error)
+                return
+            }
+            
+            // make sure we got data
+            guard let responseData = data else {
+                print("Error: did not receive data")
+                return
+            }
+            
+            // parse the result as JSON, since that's what the API provides
+            do {
+                guard let busstopGroup = try NSJSONSerialization.JSONObjectWithData(responseData, options: []) as? [NSDictionary] else {
+                    print("error trying to convert data to JSON")
+                    return
+                }
+                
+                // now we have the todo, let's just print it to prove we can access it
+                
+                for busstop in busstopGroup {
+                    
+                    if let id = busstop["id"] as? NSString {
+                        //if id != nil {
+                        print("ID is " + (id as String))
+                        //}
+                        
+                    }
+                    
+                    if let name = busstop["name"] as? NSString {
+                        print("name is " + (name as String))
+                    }
+                    
+                    if let direction = busstop["direction"] as? NSString {
+                        print("direction is " + (direction as String))
+                    }
+
+                    
+                    if let station = busstop["station"] as? NSString {
+                        print("station is " + (station as String))
+                    }
+
+                    //print("ID is" + busstop["id"])
+                    //print (busstopGroup)
+                    
+                }
+                
+                // the todo object is a dictionary
+                // so we just access the title using the "title" key
+                // so check for a title and print it if we have one
+                //guard let todoTitle = todo["title"] as? String else {
+                //    print("Could not get todo title from JSON")
+                //}
+                //print("The title is: " + todoTitle)
+            } catch  {
+                print("error trying to convert data to JSON")
+                return
+            }
+            
+        }
+        
+        task.resume()
         return true
     }
 

@@ -394,6 +394,7 @@
 				7A84CC7D1D37FFD9002DD11F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7A84CC7E1D37FFD9002DD11F /* Build configuration list for PBXNativeTarget "muensterbus-iosTests" */ = {
 			isa = XCConfigurationList;
@@ -402,6 +403,7 @@
 				7A84CC801D37FFD9002DD11F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
