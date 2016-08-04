@@ -15,6 +15,8 @@
 		7A84CC691D37FFD9002DD11F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A84CC681D37FFD9002DD11F /* Assets.xcassets */; };
 		7A84CC6C1D37FFD9002DD11F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A84CC6A1D37FFD9002DD11F /* LaunchScreen.storyboard */; };
 		7A84CC771D37FFD9002DD11F /* muensterbus_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A84CC761D37FFD9002DD11F /* muensterbus_iosTests.swift */; };
+		7AA219CF1D4B9ADA00514C02 /* BusStopGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA219CE1D4B9ADA00514C02 /* BusStopGroup.swift */; };
+		7AA219D11D4B9D9300514C02 /* Departure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA219D01D4B9D9300514C02 /* Departure.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		7A84CC721D37FFD9002DD11F /* muensterbus-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "muensterbus-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A84CC761D37FFD9002DD11F /* muensterbus_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = muensterbus_iosTests.swift; sourceTree = "<group>"; };
 		7A84CC781D37FFD9002DD11F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7AA219CE1D4B9ADA00514C02 /* BusStopGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusStopGroup.swift; sourceTree = "<group>"; };
+		7AA219D01D4B9D9300514C02 /* Departure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Departure.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +93,8 @@
 				7A84CC6A1D37FFD9002DD11F /* LaunchScreen.storyboard */,
 				7A84CC6D1D37FFD9002DD11F /* Info.plist */,
 				7A00CF4A1D47DACF007B69F7 /* BusStop.swift */,
+				7AA219CE1D4B9ADA00514C02 /* BusStopGroup.swift */,
+				7AA219D01D4B9D9300514C02 /* Departure.swift */,
 			);
 			path = "muensterbus-ios";
 			sourceTree = "<group>";
@@ -203,9 +209,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AA219D11D4B9D9300514C02 /* Departure.swift in Sources */,
 				7A00CF4B1D47DACF007B69F7 /* BusStop.swift in Sources */,
 				7A84CC641D37FFD9002DD11F /* SecondViewController.swift in Sources */,
 				7A84CC601D37FFD9002DD11F /* AppDelegate.swift in Sources */,
+				7AA219CF1D4B9ADA00514C02 /* BusStopGroup.swift in Sources */,
 				7A84CC621D37FFD9002DD11F /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
