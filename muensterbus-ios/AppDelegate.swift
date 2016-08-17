@@ -12,11 +12,12 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    //var fvc = FirstViewController()
+    //var dbsRequestedBusStop : String = " "
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        doBusStop()
+        //doBusStop()
         //doDeparture()
         
         return true
@@ -45,7 +46,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func doBusStop() {
-    
+        
+        //dbsRequestedBusStop = fvc.requestedBusstop
+        //print (dbsRequestedBusStop)
     
         let request = NSMutableURLRequest(URL: NSURL(string: "http://46.101.172.145:4567/search/Haupt")!)
         
