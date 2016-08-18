@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F696B5B1D661E5700F25ED3 /* BusStopService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F696B5A1D661E5700F25ED3 /* BusStopService.swift */; };
 		7A00CF4B1D47DACF007B69F7 /* BusStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A00CF4A1D47DACF007B69F7 /* BusStop.swift */; };
 		7A84CC601D37FFD9002DD11F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A84CC5F1D37FFD9002DD11F /* AppDelegate.swift */; };
 		7A84CC621D37FFD9002DD11F /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A84CC611D37FFD9002DD11F /* FirstViewController.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F696B5A1D661E5700F25ED3 /* BusStopService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusStopService.swift; sourceTree = "<group>"; };
 		7A00CF4A1D47DACF007B69F7 /* BusStop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusStop.swift; sourceTree = "<group>"; };
 		7A84CC5C1D37FFD9002DD11F /* muensterbus-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "muensterbus-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A84CC5F1D37FFD9002DD11F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				7A84CC6A1D37FFD9002DD11F /* LaunchScreen.storyboard */,
 				7A84CC6D1D37FFD9002DD11F /* Info.plist */,
 				7A00CF4A1D47DACF007B69F7 /* BusStop.swift */,
+				3F696B5A1D661E5700F25ED3 /* BusStopService.swift */,
 				7AA219CE1D4B9ADA00514C02 /* BusStopGroup.swift */,
 				7AA219D01D4B9D9300514C02 /* Departure.swift */,
 			);
@@ -214,6 +217,7 @@
 				7A84CC641D37FFD9002DD11F /* SecondViewController.swift in Sources */,
 				7A84CC601D37FFD9002DD11F /* AppDelegate.swift in Sources */,
 				7AA219CF1D4B9ADA00514C02 /* BusStopGroup.swift in Sources */,
+				3F696B5B1D661E5700F25ED3 /* BusStopService.swift in Sources */,
 				7A84CC621D37FFD9002DD11F /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -44,67 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-    func doBusStop() {
-        
-        //dbsRequestedBusStop = fvc.requestedBusstop
-        //print (dbsRequestedBusStop)
-    
-        let request = NSMutableURLRequest(URL: NSURL(string: "http://46.101.172.145:4567/search/Haupt")!)
-        
-        let config = NSURLSessionConfiguration.defaultSessionConfiguration()
-        let session = NSURLSession(configuration: config)
-        
-        let task = session.dataTaskWithRequest(request) { (data, response, error) in
-            
-            // check for any erorrs
-            guard error == nil else {
-                print("error calling GET on /todos/1")
-                print(error)
-                return
-            }
-            
-            // make sure we got data
-            guard let responseData = data else {
-                print("Error: did not receive data")
-                return
-            }
-            
-            // parse the result as JSON, since that's what the API provides
-            //print(responseData)
-            do {
-                guard let busstopGroupJSON = try NSJSONSerialization.JSONObjectWithData(responseData, options: []) as? NSDictionary else {
-                    print("error trying to convert data to JSON GUARD")
-                    return
-                }
-                let busstopGroup = BusStopGroup.createFromJSON(busstopGroupJSON)
-                print("name:" + busstopGroup.name)
-                
-                // now we have the todo, let's just print it to prove we can access it
-                for busstop in busstopGroup.bus_stops {
-                    //let busstop = BusStop.createFromJSON(busstopJSON)
-                    print("id:" + busstop.id)
-                    print("name:" + busstop.name)
-                    if busstop.direction != nil {
-                        print("direction:" + busstop.direction!)
-                    }
-                    if busstop.station != nil {
-                        print("station:" + busstop.station!)
-                    }
-                }
-                
-                
-            } catch  {
-                print("error trying to convert data to JSON")
-                return
-            }
-            
-        }
-        
-        task.resume()
-    
-    }
-    
+  
     func doDeparture() {
         
         

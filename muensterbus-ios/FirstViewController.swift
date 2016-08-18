@@ -35,14 +35,47 @@ class FirstViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldDidEndEditing(textField: UITextField) {
         busstopNameLabel.text = textField.text
-        requestedBusstop = textField.text
-    
-        //RK:   Hier würde ich gerne die Funktion doBusStop() aus AppDelegate aufrufen und die Variable
-        //      requestedBusstop mitgeben.
-        
+
+        BusStopService.getBusStopJSON(textField.text!) {data, response in
+                     
+                // make sure we got data
+            guard let responseData = data else {
+                print("Error: did not receive data")
+                return
+            }
+            
+            do {
+                guard let busstopGroupJSON = try NSJSONSerialization.JSONObjectWithData(responseData, options: []) as? NSDictionary else {
+                    print("error trying to convert data to JSON GUARD")
+                    return
+                }
+                let busstopGroup = BusStopGroup.createFromJSON(busstopGroupJSON)
+                
+                print("name:" + busstopGroup.name)
+                
+                // now we have the todo, let's just print it to prove we can access it
+                for busstop in busstopGroup.bus_stops {
+                    //let busstop = BusStop.createFromJSON(busstopJSON)
+                    print("id:" + busstop.id)
+                    print("name:" + busstop.name)
+                    if busstop.direction != nil {
+                        print("direction:" + busstop.direction!)
+                    }
+                    if busstop.station != nil {
+                        print("station:" + busstop.station!)
+                    }
+                }
+                
+                
+            } catch  {
+                    print("error trying to convert data to JSON")
+                    return
+            }
+            
+        }
         
     }
     
-
 }
+
 
